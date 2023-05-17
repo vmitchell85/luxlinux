@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/red', function () {
+    $process = new Process(['/home/vince/luxafor-python/luxafor-linux.py color -l 255 -r 0 -g 0 -b 0']);
+    $process->run();
+});
